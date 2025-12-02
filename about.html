@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Parade of Youth - A Legacy of Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#faf5ff', 
+                            100: '#f3e8ff', 
+                            200: '#e9d5ff',
+                            500: '#8b5cf6', 
+                            600: '#7c3aed', 
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                        art: {
+                            teal: '#0d9488',
+                            pink: '#db2777',
+                            gold: '#fbbf24',
+                            blue: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e9d5ff 1.5px, transparent 1.5px), radial-gradient(#d9f99d 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #4c1d95, #db2777);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b-4 border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-brand-700 to-art-pink rounded-lg flex items-center justify-center text-white font-extrabold text-2xl shadow-lg transform group-hover:rotate-3 transition duration-300">
+                            P
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-heading text-xl font-extrabold text-brand-900 uppercase tracking-wider leading-none">Parade of</span>
+                            <span class="font-heading text-xl font-extrabold text-art-pink uppercase tracking-wider leading-none">Youth</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-brand-900 hover:text-art-pink font-bold transition text-sm uppercase tracking-wide">Home</a>
+                    <a href="about.html" class="text-art-pink font-bold transition text-sm uppercase tracking-wide">About Us</a>
+                    <a href="index.html#services" class="text-brand-900 hover:text-art-pink font-bold transition text-sm uppercase tracking-wide">Fiscal Sponsorship</a>
+                    <a href="index.html#contact" class="bg-brand-800 hover:bg-art-pink text-white px-6 py-3 rounded font-bold uppercase tracking-wider transition shadow-lg text-sm">Apply Now</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-brand-900 hover:text-art-pink focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-brand-900 hover:bg-brand-50 hover:text-art-pink rounded-md">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-art-pink bg-brand-50 rounded-md">About Us</a>
+                <a href="index.html#services" class="block px-3 py-2 text-base font-medium text-brand-900 hover:bg-brand-50 hover:text-art-pink rounded-md">Fiscal Sponsorship</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-base font-medium text-brand-900 hover:bg-brand-50 hover:text-art-pink rounded-md">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern relative py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-block bg-art-pink/10 px-4 py-2 rounded-full mb-6">
+                    <span class="text-art-pink font-bold uppercase tracking-widest text-xs">Our Story</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-heading font-black text-brand-900 leading-tight mb-6">
+                    A Legacy of <br><span class="text-gradient">Excellence & Service</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Named in honor of Ricardo Scales and Patience Scales, whose dedication to musical excellence and cultural preservation continues to inspire our work supporting the next generation of artists and changemakers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ricardo Scales Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Column -->
+                <div class="relative order-2 md:order-1">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-700 to-art-blue rounded-2xl blur opacity-20"></div>
+                    <div class="relative bg-white p-2 rounded-2xl shadow-2xl">
+                        <img 
+                            src="ricardo-scales.webp" 
+                            alt="Ricardo Scales - Conservatory Trained Virtuoso and Cultural Pillar" 
+                            class="w-full h-auto rounded-xl object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="order-1 md:order-2">
+                    <div class="inline-block bg-art-blue/10 px-4 py-2 rounded-full mb-6">
+                        <span class="text-art-blue font-bold uppercase tracking-widest text-xs">Musical Virtuosity</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black text-brand-900 mb-6 leading-tight">
+                        Ricardo <span class="text-gradient">Scales</span>
+                    </h2>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                        <strong class="text-brand-900">Reunited and it sounds SO GOOD.</strong> The incredible privilege of collaborating with the Maestro who believed in me first. When I was introducing the Bay to my jazz artistry, he took a bet on me and the rest is history. My instrument cemented the presidential work and civic engagements followed.
+                    </p>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                        Now we're documenting mastery before it becomes memory: capturing performances, preserving what happens when someone has spent over four decades weaving classical precision, jazz improvisation, gospel soul, and R&B groove into something unmistakable.
+                    </p>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        This concert series is living archive. <strong class="text-brand-900">Ricardo's contribution to American sound doesn't disappear into unmarked history. Not on my watch.</strong>
+                    </p>
+                    
+                    <div class="bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 rounded-2xl p-6 mb-6">
+                        <h3 class="text-xl font-heading font-bold text-brand-900 mb-4">Legacy Highlights</h3>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-music text-art-blue mt-1"></i>
+                                <span><strong>40+ Years</strong> of conservatory trained virtuosity</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-award text-art-gold mt-1"></i>
+                                <span><strong>30+ Albums</strong> and Billboard recognition</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-landmark text-art-teal mt-1"></i>
+                                <span><strong>Presidential Performances</strong> and civic engagements</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-users text-art-pink mt-1"></i>
+                                <span><strong>Cultural Leadership</strong> from San Francisco's Redwood Room to international stages</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-heart text-brand-700 mt-1"></i>
+                                <span><strong>Mentorship Legacy</strong> opening doors for emerging artists across the Bay</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-art-blue to-brand-700 rounded-xl p-6 text-white">
+                        <p class="text-lg font-semibold mb-2">Ricardo Scales Legacy Concert Series</p>
+                        <p class="text-brand-100">When legends like Billy Joel and Harry Connick Jr. abandon their hotel rooms to join you at the piano, you've transcended performance. This is what it looks like when artistry becomes cultural infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patience Scales Section -->
+    <section class="py-20 bg-gradient-to-br from-brand-50 via-white to-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Content Column -->
+                <div>
+                    <div class="inline-block bg-art-pink/10 px-4 py-2 rounded-full mb-6">
+                        <span class="text-art-pink font-bold uppercase tracking-widest text-xs">Grace & Elegance</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black text-brand-900 mb-6 leading-tight">
+                        Patience <span class="text-gradient">Scales</span>
+                    </h2>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                        The woman who raised a maestro. <strong class="text-brand-900">Patience Scales</strong> represents the foundation upon which excellence is built. Her name itself speaks to the quiet strength, unwavering support, and enduring commitment that shaped one of the Bay Area's most distinguished musical careers.
+                    </p>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-4">
+                        In naming Parade of Youth to honor both Ricardo and Patience, we recognize that legacy is not created in isolation. Behind every virtuoso is a family that believed first, sacrificed most, and celebrated loudest. Behind every standing ovation is someone who stood by through the practice, the rejections, the long nights, and the longer journeys.
+                    </p>
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                        <strong class="text-brand-900">Patience's elegance and grace</strong> live on in the way we serve our sponsored artists: with dignity, with attention to detail, with the understanding that supporting creative work is sacred work.
+                    </p>
+                    
+                    <div class="bg-gradient-to-br from-white to-brand-50 border-2 border-brand-200 rounded-2xl p-6 mb-6">
+                        <h3 class="text-xl font-heading font-bold text-brand-900 mb-4">The Foundation of Excellence</h3>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-hands-helping text-art-pink mt-1"></i>
+                                <span><strong>Family as First Believers</strong> in creative potential</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-gem text-art-gold mt-1"></i>
+                                <span><strong>Grace Under Pressure</strong> modeling resilience and dignity</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-seedling text-art-teal mt-1"></i>
+                                <span><strong>Nurturing Excellence</strong> through patience and commitment</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-crown text-brand-700 mt-1"></i>
+                                <span><strong>Timeless Elegance</strong> that continues to inspire</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-art-pink to-brand-800 rounded-xl p-6 text-white">
+                        <p class="text-lg font-semibold mb-2">A Name That Speaks Volumes</p>
+                        <p class="text-brand-100">Patience. Not just a virtue, but a legacy. The kind of unwavering support that allows genius to flourish, excellence to mature, and cultural contributions to endure across generations.</p>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-art-pink to-brand-700 rounded-2xl blur opacity-20"></div>
+                    <div class="relative bg-white p-2 rounded-2xl shadow-2xl">
+                        <img 
+                            src="patience-scales.webp" 
+                            alt="Patience Scales - Grace, Elegance, and the Foundation of Excellence" 
+                            class="w-full h-auto rounded-xl object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-brand-50 px-4 py-2 rounded-full mb-6">
+                    <span class="text-brand-700 font-bold uppercase tracking-widest text-xs">Our Mission</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-heading font-black text-brand-900 mb-6">
+                    Carrying the <span class="text-gradient">Legacy Forward</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 rounded-2xl p-8 hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-brand-700 rounded-xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Musical Excellence</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Following Ricardo's example, we support artists who are committed to mastery, innovation, and pushing the boundaries of their craft while staying rooted in tradition.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 rounded-2xl p-8 hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-art-pink rounded-xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Patient Support</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Honoring Patience's legacy, we provide the steady, unwavering support that allows creative projects to mature and flourish without rushing the process.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-brand-50 to-white border-2 border-brand-200 rounded-2xl p-8 hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-art-teal rounded-xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Community Impact</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Like Ricardo's commitment to opening doors for others, we create pathways for artists and youth leaders to access resources and networks that transform their work.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-900 rounded-3xl p-12 md:p-16 text-white text-center">
+                <h3 class="text-3xl md:text-4xl font-heading font-black mb-6">
+                    Named in Honor. <span class="text-art-pink">Built for Impact.</span>
+                </h3>
+                <p class="text-xl text-brand-100 max-w-4xl mx-auto leading-relaxed mb-8">
+                    <strong class="text-white">Parade of Youth</strong> was founded on the principle that every artist and youth leader deserves access to the infrastructure needed to bring their vision to life. Our fiscal sponsorship services remove financial and administrative barriers, allowing creators to focus on what they do best.
+                </p>
+                <p class="text-lg text-brand-200 max-w-3xl mx-auto leading-relaxed">
+                    Through partnerships with organizations like <strong class="text-white">Artists and Athletes for Change (AAFC)</strong> and <strong class="text-white">LINEA</strong>, we provide comprehensive support that goes beyond traditional fiscal sponsorship, creating pathways for sustainable creative careers and community impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gradient-to-br from-brand-50 via-white to-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-art-gold/10 px-4 py-2 rounded-full mb-6">
+                    <span class="text-art-gold font-bold uppercase tracking-widest text-xs">Core Values</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-heading font-black text-brand-900 mb-6">
+                    The Principles That <span class="text-gradient">Guide Us</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white border-2 border-brand-200 rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-brand-700 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                            <i class="fas fa-trophy text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold text-brand-900 mb-3">Excellence Without Compromise</h3>
+                            <p class="text-slate-700 leading-relaxed">
+                                Ricardo's 40+ years of mastery teach us that excellence is not accidental. We hold ourselves and our sponsored projects to the highest standards of quality, professionalism, and impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-brand-200 rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-art-pink rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                            <i class="fas fa-hourglass-half text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold text-brand-900 mb-3">Patience in Process</h3>
+                            <p class="text-slate-700 leading-relaxed">
+                                True cultural impact cannot be rushed. We understand that meaningful projects require time to develop, mature, and achieve lasting influence. We provide the patient support that allows this to happen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-brand-200 rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-art-teal rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                            <i class="fas fa-door-open text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold text-brand-900 mb-3">Opening Doors</h3>
+                            <p class="text-slate-700 leading-relaxed">
+                                Just as Ricardo took a bet on emerging artists, we actively create opportunities for underrepresented creators to access resources, networks, and platforms that transform their work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-brand-200 rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-art-gold rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                            <i class="fas fa-archive text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold text-brand-900 mb-3">Documenting Legacy</h3>
+                            <p class="text-slate-700 leading-relaxed">
+                                We're committed to ensuring that contributions to American culture don't disappear into unmarked history. Through our work, we create living archives of excellence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-brand-200 rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-art-blue rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                            <i class="fas fa-hands-helping text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold text-brand-900 mb-3">Sacred Service</h3>
+                            <p class="text-slate-700 leading-relaxed">
+                                We approach our work with the understanding that supporting creative work is sacred work. Every project we sponsor receives our full attention, dedication, and respect.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-2 border-brand-200 rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-brand-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                            <i class="fas fa-infinity text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold text-brand-900 mb-3">Intergenerational Impact</h3>
+                            <p class="text-slate-700 leading-relaxed">
+                                From Patience's foundation to Ricardo's mastery to the next generation we serve, we recognize that true legacy spans generations and creates bridges between past, present, and future.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-brand-900 via-brand-800 to-brand-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block bg-art-pink/20 px-4 py-2 rounded-full mb-6">
+                <span class="text-art-pink font-bold uppercase tracking-widest text-xs">Join Our Legacy</span>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-heading font-black mb-6">Ready to Transform Your <span class="text-art-pink">Vision</span>?</h2>
+            <p class="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
+                Join our community of artists and youth leaders who are carrying forward the legacy of excellence, patience, and cultural impact.
+            </p>
+            <a href="index.html#contact" class="inline-block bg-art-pink hover:bg-art-gold text-white px-10 py-5 rounded-xl font-bold uppercase tracking-wider transition shadow-2xl text-lg hover:shadow-xl transform hover:-translate-y-1">
+                Apply for Fiscal Sponsorship
+            </a>
+            <p class="mt-6 text-brand-200">
+                Questions? Email us at <a href="mailto:info@paradeofyouth.org" class="text-art-pink hover:text-art-gold font-semibold">info@paradeofyouth.org</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-100 py-12 border-t-4 border-art-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-brand-700 to-art-pink rounded-lg flex items-center justify-center text-white font-extrabold text-xl">
+                            P
+                        </div>
+                        <span class="font-heading text-lg font-extrabold text-white uppercase">Parade of Youth</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Empowering artists and youth leaders through fiscal sponsorship services.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white uppercase tracking-wider mb-4 text-sm">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-art-pink transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-art-pink transition">About Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-art-pink transition">Services</a></li>
+                        <li><a href="index.html#calculator" class="hover:text-art-pink transition">Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white uppercase tracking-wider mb-4 text-sm">Legacy</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="text-brand-200">Ricardo Scales</li>
+                        <li class="text-brand-200">Patience Scales</li>
+                        <li class="text-brand-200">Cultural Preservation</li>
+                        <li class="text-brand-200">Excellence in Service</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white uppercase tracking-wider mb-4 text-sm">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="mailto:info@paradeofyouth.org" class="hover:text-art-pink transition flex items-center gap-2">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@paradeofyouth.org</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-brand-700 pt-8 text-center text-sm">
+                <p>&copy; 2024 Parade of Youth. A 501(c)(3) Nonprofit Organization. All rights reserved.</p>
+                <p class="mt-2 text-xs text-brand-300">Named in honor of Ricardo Scales & Patience Scales | Built by Marchitects</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
