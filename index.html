@@ -358,7 +358,7 @@
                 </div>
 
                 <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl border-t-4 border-art-gold">
-                    <form action="https://formspree.io/f/xdkoqzwq" method="POST" class="space-y-6">
+                    <form action="https://formspree.io/f/hello.admin@paradeofyouth.com" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-xs font-bold text-brand-900 uppercase tracking-wider mb-2">First Name</label>
@@ -689,4 +689,33 @@
             let savings = standaloneCost - sponsorFee;
             if (savings < 0) savings = 0; 
 
-            doc
+            // Update the display text
+            document.getElementById('independentCost').innerText = '$' + standaloneCost.toLocaleString();
+            document.getElementById('ourFee').innerText = '$' + sponsorFee.toLocaleString();
+            document.getElementById('totalSavings').innerText = '$' + savings.toLocaleString();
+        }
+
+        // Modal Logic
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Initialize calculator on load
+        calculateSavings();
+    </script>
+</body>
+</html>
