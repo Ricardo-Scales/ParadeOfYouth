@@ -678,15 +678,66 @@
 
     
 
-    <script>
+   <script>
         // Calculator Logic
         function calculateSavings() {
+            // Get the budget value, default to 0 if empty
             const budget = parseFloat(document.getElementById('budgetInput').value) || 0;
+            
+            // Logic: Standalone 501c3 costs ~7.5k fixed + 5% variable admin overhead
             const fixedAdminCosts = 7500; 
             const variableAdminCosts = budget * 0.05; 
             const standaloneCost = fixedAdminCosts + variableAdminCosts;
+            
+            // Logic: Parade fee is flat 10%
             const sponsorFee = budget * 0.10;
+            
+            // Calculate Savings
             let savings = standaloneCost - sponsorFee;
-            if (savings < 0) savings = 0; 
+            
+            // Optional: If savings are negative (small budgets), you might want to show 0 or the actual negative
+            // Currently setup to show 0 if no savings, but usually fiscal sponsorship saves money on small-med budgets.
+            // For very large budgets ($150k+), standalone might become cheaper, so let's allow negative or cap at 0.
+            // Your previous code had this check:
+            // if (savings < 0) savings = 0; 
 
-            doc
+            // Update the DOM elements
+            document.getElementById('independentCost').innerText = '$' + standaloneCost.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            document.getElementById('ourFee').innerText = '$' + sponsorFee.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+            document.getElementById('totalSavings').innerText = '$' + savings.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+        }
+
+        // Modal Logic
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                // Small timeout to allow display:block to apply before opacity transition
+                setTimeout(() => {
+                    modal.classList.add('active');
+                }, 10);
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300); // Wait for transition to finish
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+
+        // Initialize calculator on load
+        window.addEventListener('DOMContentLoaded', calculateSavings);
+    </script>
+</body>
+</html>
